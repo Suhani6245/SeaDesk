@@ -1,7 +1,7 @@
 
 # SeaDesk - A Browser Extension
 
-SeaDesk is a relaxing Chrome extension that brings a mini beach and ocean scene to your browser. Enjoy soothing waves, animated fishes, and ambient sounds while you work. A serene little escape right on your screen!
+SeaDesk is a relaxing browser extension that brings a mini beach and ocean scene to your browser. Enjoy soothing waves, animated fishes, and ambient sounds while you work. A serene little escape right on your screen!
 
 
 ## Tech Stack
