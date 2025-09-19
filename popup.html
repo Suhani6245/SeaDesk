@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeaDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="beach"></div>
+    <div class="fact-bar">Fact of the day</div>
+    <div class="controls">
+      <div class="control">
+        <img id="dvd" src="assets/icon64.png" alt="music"> 
+        <div>
+          music
+          <div id="musicToggle" class="toggle"></div>
+        </div>
+      </div>
+      <div class="control">
+  <img src="assets/fish2.png" alt="dive" style="padding-right: 5px;">
+  <div>
+    dive
+    <div id="diveToggle" class="toggle"></div>
+  </div>
+
+<!-- Extra hidden audio for dive scene -->
+<audio id="diveMusic" src="assets/deepsea.mp3" loop></audio>
+
+    </div>
+    
+  </div>
+
+  <!-- Background music (hidden player) -->
+  <audio id="bgMusic" src="assets/ocean_sound.mp3" loop></audio>
+
+  <script src="popup.js"></script>
+</body>
+</html>

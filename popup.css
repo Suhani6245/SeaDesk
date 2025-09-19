@@ -1,0 +1,163 @@
+body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Nunito', sans-serif;
+    }
+html, body {
+    width: 300px;  /* set desired width */
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* prevent scrollbars */
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 400px;
+}
+
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #87CEEB; 
+      overflow: hidden;
+    }
+
+    /* Beach animated background */
+    .beach {
+      width: 300px;
+      height: 400px;
+      background: url("assets/beach-scene.png") no-repeat;
+      image-rendering: pixelated;
+      animation: beachAnim 1s steps(5) infinite;
+    }
+
+    @keyframes beachAnim {
+      from { background-position: 0 0; }
+      to   { background-position: -1500px 0; }
+    }
+
+.fact-bar {
+  width: 100%;
+  background: #b0d7d5;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+    /* Controls area */
+    .controls {
+      
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      background: #6ec9f5;
+    }
+
+    .control {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      color: #354eab;
+      font-weight: 600;
+    }
+
+    .control img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s linear;
+    }
+
+    /* Slower rotation animation */
+    .rotating {
+      animation: spin 5s linear infinite; /* slower (5s per turn) */
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Toggle style */
+    .toggle {
+      width: 40px;
+      height: 22px;
+      background: #1e90ff;
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .toggle::before {
+      content: "";
+      position: absolute;
+      top:3px;
+      left: 3px;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+
+    .toggle.active::before {
+      left: 20px;
+    }
+/* Dive animated background */
+.dive {
+  width: 300px;
+  height: 400px;
+  background: url("assets/dive.png") no-repeat;
+  image-rendering: pixelated;
+  animation: diveAnim 0.7s steps(4) infinite;
+  position: relative; /* needed for fish absolute positioning */
+}
+
+@keyframes diveAnim {
+  from { background-position: 0 0; }
+  to   { background-position: -1200px 0; } /* 300*4 */
+}
+
+/* Fish container inside dive */
+.fish {
+  position: absolute;
+  width: 65px;
+  height: auto;
+  top: 0;
+  left: -100px;
+  animation: swim linear forwards;
+}
+
+.fish.reverse {
+  transform: scaleX(-1);
+  left: 100%;
+  animation: swim-reverse linear forwards;
+}
+
+@keyframes swim {
+  from { left: -150px; }
+  to { left: 100%; }
+}
+
+@keyframes swim-reverse {
+  from { left: 100%; }
+  to { left: -150px; }
+}
+
+    
